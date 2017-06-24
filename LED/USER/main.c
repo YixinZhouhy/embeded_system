@@ -5,15 +5,17 @@ void Delay(__IO u32 nCount);
 
 int main(void)
 {	
+	SystemInit();
+	
 	/* LED ¶Ë¿Ú³õÊ¼»¯ */
 	LED_GPIO_Config();	 
  
 	while (1)
 	{
 		LED1( OFF );  // ÁÁ
-		Delay(8000000);
+		Delay(72000000);
 		LED1( ON );  // Ãð
-		Delay(8000000);
+		Delay(72000000);
 	}
 
 }
