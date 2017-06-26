@@ -6,7 +6,7 @@
 #include "usart1.h"
 #include "adc.h"
 
-extern __IO uint16_t ADC_ConvertedValue[AdcDataLength];
+extern __IO uint16_t ADC_ConvertedValue[AdcDataLength][AdcChannelNum];
 
 float ADC_ConvertedValueLocal;
 
@@ -14,19 +14,23 @@ void delay(int i);
 
 int main(void)
 {	
-		int i;
+		int ChannelNum, DataLength; // 作为循环计数
 	
 		USART1_Config();	 
 		ADC1_Init();
 	
 	  while(1)
 		{
-			for(i = 0; i < AdcDataLength; i++)
+		  for(DataLength = 0; DataLength < AdcDataLength; DataLength++)
 			{
-				ADC_ConvertedValueLocal = (float) ADC_ConvertedValue[i] / 4096 * 3.3;
-				printf("%f ", ADC_ConvertedValueLocal);
+			  for(ChannelNum = 0; ChannelNum < AdcChannelNum; ChannelNum++)
+				{
+					ADC_ConvertedValueLocal = (float) ADC_ConvertedValue[DataLength][ChannelNum] / 4096 * 3.3;
+					printf("%.2f ", ADC_ConvertedValueLocal);
+				}
+				printf("\n");
 			}
-			delay(7999999);
+			//delay(7999999);
 		}
 }
 

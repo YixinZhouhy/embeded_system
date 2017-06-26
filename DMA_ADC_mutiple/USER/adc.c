@@ -1,6 +1,6 @@
 #include "adc.h"
 
-__IO uint16_t ADC_ConvertedValue[AdcDataLength];
+__IO uint16_t ADC_ConvertedValue[AdcDataLength][AdcChannelNum];
 
 static void ADC1_GPIO_Config(void)
 {
@@ -13,12 +13,11 @@ static void ADC1_GPIO_Config(void)
 		RCC_APB2PeriphClockCmd( RCC_APB2Periph_ADC1 | 
 													  RCC_APB2Periph_GPIOC,
 														ENABLE);
-    // configure the PC_1 (ADC1_IN11)
-		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+    // configure the PC_1 and PC_2 (ADC1_IN11 and ADC1_IN12)
+		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2;
 		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
 		GPIO_Init(GPIOC, &GPIO_InitStructure);
-//    set the clock of ADC1	
-   	//RCC_APB2PeriphClockCmd( RCC_APB2Periph_ADC1, ENABLE);
+	
 }
 
 static void ADC1_Mode_Config(void)
@@ -40,7 +39,7 @@ static void ADC1_Mode_Config(void)
 		DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;
 	
 		// 数据传输大小
-	  DMA_InitStructure.DMA_BufferSize = AdcDataLength;
+	  DMA_InitStructure.DMA_BufferSize = AdcChannelNum * AdcDataLength;
 	
 	  // 外设地址是否自增 ： 否
 		DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
@@ -72,7 +71,7 @@ static void ADC1_Mode_Config(void)
 		ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
 		
 		// 是否开启扫描模式 : 否 扫描模式用于多通道采集
-		ADC_InitStructure.ADC_ScanConvMode = DISABLE;
+		ADC_InitStructure.ADC_ScanConvMode = ENABLE;
 		
 		// 是否开启连续转换模式 ：是
 		ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;
@@ -84,7 +83,7 @@ static void ADC1_Mode_Config(void)
 		ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
 		
 		// 数据转换的通道数
-		ADC_InitStructure.ADC_NbrOfChannel = 1;
+		ADC_InitStructure.ADC_NbrOfChannel = AdcChannelNum;
 		
 		ADC_Init(ADC1, &ADC_InitStructure);
 		
@@ -95,10 +94,10 @@ static void ADC1_Mode_Config(void)
 		
 		// 配置采样周期
 		ADC_RegularChannelConfig(ADC1, ADC_Channel_11, 1, ADC_SampleTime_55Cycles5);
+		ADC_RegularChannelConfig(ADC1, ADC_Channel_12, 2, ADC_SampleTime_55Cycles5);
 		
 		// 使能ADC1 DMA
 		ADC_DMACmd(ADC1, ENABLE);
-		
 		
 		// 使能 ADC1
 		ADC_Cmd(ADC1, ENABLE);

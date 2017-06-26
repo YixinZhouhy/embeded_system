@@ -4,8 +4,8 @@
 #include "stm32f10x.h"
 
 #define ADC1_DR_Address  (uint32_t)(0x40012400 + 0x4c)
-#define AdcChannel  2
-#define AdcDataLength  50
+#define AdcChannelNum  2
+#define AdcDataLength  2
 
 void ADC1_Init(void);
 

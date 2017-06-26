@@ -17,7 +17,7 @@ I (usart1.h)(0x594876D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x53463A44)
 I (dma.h)(0x59476EFF)
 F (.\stm32f10x_it.c)(0x59487B0E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\USER -I..\FWlib\src -I..\FWlib\inc -I..\Output-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F103X_HA-o ..\output\stm32f10x_it.o --omf_browse ..\output\stm32f10x_it.crf --depend ..\output\stm32f10x_it.d)
-I (stm32f10x_it.h)(0x5947D469)
+I (stm32f10x_it.h)(0x59487F20)
 I (..\CMSIS\stm32f10x.h)(0x4D783CB4)
 I (..\CMSIS\core_cm3.h)(0x4D523B58)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53463A44)

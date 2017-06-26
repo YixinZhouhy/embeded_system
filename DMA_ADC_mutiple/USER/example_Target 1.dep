@@ -1,6 +1,6 @@
 Dependencies for Project 'example', Target 'Target 1': (DO NOT MODIFY !)
 F (..\CMSIS\startup\startup_stm32f10x_hd.s)(0x4D783CDE)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include--list ..\startup_stm32f10x_hd.lst --xref -o ..\output\startup_stm32f10x_hd.o --depend ..\output\startup_stm32f10x_hd.d)
-F (.\main.c)(0x594CBFEC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\USER -I..\FWlib\src -I..\FWlib\inc -I..\Output-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F103X_HA-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+F (.\main.c)(0x594E2830)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\USER -I..\FWlib\src -I..\FWlib\inc -I..\Output-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F103X_HA-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
 I (..\CMSIS\stm32f10x.h)(0x4D783CB4)
 I (..\CMSIS\core_cm3.h)(0x4D523B58)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53463A44)
@@ -15,7 +15,7 @@ I (..\FWlib\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\FWlib\inc\misc.h)(0x4D783BB4)
 I (usart1.h)(0x5948C388)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x53463A44)
-I (adc.h)(0x594CBFB7)
+I (adc.h)(0x594E1B05)
 F (.\stm32f10x_it.c)(0x5948E89C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\USER -I..\FWlib\src -I..\FWlib\inc -I..\Output-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F103X_HA-o ..\output\stm32f10x_it.o --omf_browse ..\output\stm32f10x_it.crf --depend ..\output\stm32f10x_it.d)
 I (stm32f10x_it.h)(0x59487F20)
 I (..\CMSIS\stm32f10x.h)(0x4D783CB4)
@@ -47,8 +47,8 @@ I (..\FWlib\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (..\FWlib\inc\stm32f10x_usart.h)(0x4D783BB4)
 I (..\FWlib\inc\misc.h)(0x4D783BB4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x53463A44)
-F (.\adc.c)(0x594CBFB7)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\USER -I..\FWlib\src -I..\FWlib\inc -I..\Output-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F103X_HA-o ..\output\adc.o --omf_browse ..\output\adc.crf --depend ..\output\adc.d)
-I (adc.h)(0x594CBFB7)
+F (.\adc.c)(0x594E266A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\USER -I..\FWlib\src -I..\FWlib\inc -I..\Output-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F103X_HA-o ..\output\adc.o --omf_browse ..\output\adc.crf --depend ..\output\adc.d)
+I (adc.h)(0x594E1B05)
 I (..\CMSIS\stm32f10x.h)(0x4D783CB4)
 I (..\CMSIS\core_cm3.h)(0x4D523B58)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53463A44)
